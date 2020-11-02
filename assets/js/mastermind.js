@@ -91,7 +91,8 @@ window.onload = function () {
             if(this.responseCollection.length == 4){
                 this.goodAtGoodPlace = 0;
                 this.goodAtWrongPlace = 0;
-                let blueprintCheck = this.solutionBlueprint;
+                let blueprintCheck = {};
+                Object.assign(blueprintCheck,this.solutionBlueprint);
 
                 this.responseCollection.forEach((response,index) => {
                     if(response.color == this.colorToFindCollection[index].color){
