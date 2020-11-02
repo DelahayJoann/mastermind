@@ -4,29 +4,26 @@
     <title>Mastermind</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/mastermind.css">
 </head>
   <body>
     <div class="container" role="main">
         <div class="row">
-            <div class="col-sm-6 d-flex align-items-center p-4" id="reponsesHistory">
+          <div class="row col-sm-4 d-flex align-items-center p-4" id="colorCheck">
                 
-            </div>
-            <div class="col-sm-6 d-flex align-items-center p-4" id="colorsPicker">
-                <div class="colorPick mx-auto"> </div>
-                <div class="colorPick mx-auto"> </div>
-                <div class="colorPick mx-auto"> </div>
-                <div class="colorPick mx-auto"> </div>
-                <div class="colorPick mx-auto"> </div>
-                <div class="colorPick mx-auto"> </div>
-            </div>
+          </div>
+          <div class="row col-sm-4 d-flex align-items-center p-4" id="reponsesHistory">
+              
+          </div>
+          <div class="col-sm-4 d-flex align-items-center p-4" id="colorsPicker">
+              
+          </div>
         </div>
         <div class="row">
-            <div class="col-sm-12"  id="currentReponse">
-                
-            </div>
+            <div class="col-sm-12  d-flex align-items-center p-4"  id="currentReponse"> </div>
+            <button id="removeLast">Remove Last</button>
+            <button id="sendResponse">Try</button>
         </div>
     </div>
     <script src="./assets/js/mastermind.js"></script>
