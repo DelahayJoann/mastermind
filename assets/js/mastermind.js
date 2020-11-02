@@ -77,14 +77,14 @@ window.onload = function () {
             for(let i=0;i<4;i++){
                 this.colorToFindCollection.push(new CircleColor(colors[Math.floor(Math.random()*6)],0,null,false));
             }
-            console.log(this.colorToFindCollection); // show soluce in console to test
+            //console.log(this.colorToFindCollection); // show soluce in console to test
             this.buildSolutionBlueprint();
         }
         buildSolutionBlueprint(){
             this.colorToFindCollection.forEach((colorToFind) =>{
                 this.solutionBlueprint[colorToFind.color] = this.colorToFindCollection.filter(a => a.color == colorToFind.color).length;
             });
-            console.log(this.solutionBlueprint); // display blueprint
+            //console.log(this.solutionBlueprint); // display blueprint
         }
 
         checkResponse(){
