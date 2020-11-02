@@ -92,17 +92,19 @@ window.onload = function () {
                 this.goodAtGoodPlace = 0;
                 this.goodAtWrongPlace = 0;
                 let blueprintCheck = {};
-                Object.assign(blueprintCheck,this.solutionBlueprint);
+                blueprintCheck = {...this.solutionBlueprint};
+                //console.log(blueprintCheck);
 
                 this.responseCollection.forEach((response,index) => {
                     if(response.color == this.colorToFindCollection[index].color){
-                        ++this.goodAtGoodPlace;
-                        --blueprintCheck[response.color];
-                        //console.log(blueprintCheck);
+                        this.goodAtGoodPlace++;
+                        blueprintCheck[response.color]--;
                     }
-                    else if (blueprintCheck[response.color] > 0){
-                        ++this.goodAtWrongPlace;
-                        --blueprintCheck[response.color];
+                });
+                this.responseCollection.forEach((response,index)=>{
+                    if (blueprintCheck[response.color] > 0){
+                        this.goodAtWrongPlace++;
+                        blueprintCheck[response.color]--;
                     }
                 });
 
